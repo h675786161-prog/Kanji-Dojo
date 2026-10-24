@@ -1,0 +1,167 @@
+<resources>
+
+    <string name="study_category_letter">文字</string>
+    <string name="study_category_vocab">单词</string>
+    <string name="practice_type_writing">书写</string>
+    <string name="practice_type_flashcard">记忆卡片</string>
+    <string name="practice_type_reading_picker">读音选择</string>
+
+    <string name="srs_status_new">新学</string>
+    <string name="srs_status_due">待复习</string>
+    <string name="srs_status_done">已完成</string>
+
+    <string name="dialog_apply">应用</string>
+    <string name="dialog_cancel">取消</string>
+
+    <string name="vocab_card_missing_meaning">[暂无释义]</string>
+    <string name="error_unknown">未知错误</string>
+
+    <string name="update_snackbar_title">应用已更新</string>
+    <string name="update_snackbar_action">查看变化</string>
+
+    <string name="general_dashboard_header_streak_current">当前连续学习天数</string>
+    <string name="general_dashboard_header_streak_longest">最长连续学习天数</string>
+    <string name="general_dashboard_header_reviews">今日复习次数</string>
+
+    <string name="general_dashboard_study_target_title">学习目标</string>
+    <string name="general_dashboard_study_target_edit">编辑</string>
+    <string name="general_dashboard_study_target_daily_limit">每日上限</string>
+    <string name="general_dashboard_study_target_empty">选择</string>
+    <string name="general_dashboard_study_target_no_decks">暂无卡组，点击创建</string>
+    <string name="general_dashboard_study_target_nothing_left">今天的学习任务已经完成</string>
+
+    <string name="general_dashboard_text_analysis">文本分析（预览）</string>
+    <string name="general_dashboard_social">社区</string>
+    <string name="general_dashboard_downloads">下载</string>
+    <string name="general_dashboard_tutorial">使用教程</string>
+
+    <string name="social_discord">Discord</string>
+    <string name="social_youtube">YouTube</string>
+
+    <string name="setting_daily_reset_time_item">每日重置时间</string>
+
+    <string name="text_analysis_title">文本分析</string>
+    <string name="text_analysis_history_title">历史记录</string>
+    <string name="text_analysis_history_empty">暂无记录</string>
+
+    <string name="text_analysis_offer_title">分析文本，保存汉字与词汇</string>
+    <string name="text_analysis_offer_subtitle">需要登录账户。预览期间免费，后续变化请留意 Discord 公告</string>
+    <string name="text_analysis_input_placeholder">在这里输入文本</string>
+    <string name="text_analysis_translation_placeholder">翻译</string>
+
+    <string name="text_analysis_configuration_title">设置</string>
+    <string name="text_analysis_configuration_analysis_provider">分析服务</string>
+    <string name="text_analysis_ichiran_description">速度较慢，最多 100 字符</string>
+    <string name="text_analysis_configuration_translation_provider">翻译服务</string>
+
+    <string name="text_analysis_action_furigana">注音假名</string>
+    <string name="text_analysis_action_highlight">标记词性</string>
+    <string name="text_analysis_action_save_letters">保存汉字</string>
+
+    <string name="text_analysis_save_words_counter">已选单词：%1$s</string>
+    <string name="text_analysis_save_words_cancel">取消</string>
+    <string name="text_analysis_save_words_apply">加入卡组</string>
+
+    <string name="text_analysis_save_letters_counter">已选汉字：%1$s</string>
+    <string name="text_analysis_save_letters_select_kanji">选择全部汉字</string>
+    <string name="text_analysis_save_letters_cancel">取消</string>
+    <string name="text_analysis_save_letters_apply">加入卡组</string>
+
+    <string name="text_analysis_alternative_words">其他候选词：</string>
+    <string name="text_analysis_word_parse_error">错误</string>
+
+    <string name="text_analysis_preview_text">富士山は日本の象徴で、登山シーズンになると多くの登山者が頂上を目指します。その絶景は一生の思い出になります。</string>
+    <string name="text_analysis_preview_translation">富士山是日本的象征。登山季节，许多登山者会向山顶进发。壮丽的景色将成为一生难忘的回忆。</string>
+
+    <string name="common_dashboard_deck_details">详情</string>
+    <string name="common_dashboard_deck_edit">编辑</string>
+
+    <string name="practice_new_cards_config_title">新卡顺序</string>
+    <string name="practice_new_cards_config_subtitle">新卡在练习队列中的位置</string>
+    <string name="practice_new_cards_config_first">最前</string>
+    <string name="practice_new_cards_config_last">最后</string>
+    <string name="practice_new_cards_config_mixed">混合</string>
+
+    <string name="practice_summary_header_time">练习时长</string>
+    <string name="practice_summary_header_reviews">已复习卡片</string>
+    <string name="practice_summary_header_accuracy">正确率</string>
+    <string name="practice_summary_item_insights">累计复习 %1$s 次 · 下次复习 %2$s</string>
+    <string name="practice_summary_empty">暂无复习记录</string>
+    <string name="practice_summary_button">完成</string>
+
+    <string name="save_letters_dialog_title">将汉字加入卡组</string>
+    <string name="save_letters_dialog_contains">已有：%1$s</string>
+    <string name="save_word_dialog_title">将 %1$s 加入单词卡组</string>
+    <string name="save_word_dialog_contains_hint">已包含</string>
+    <string name="save_word_dialog_create_deck_button">创建新卡组</string>
+    <string name="save_word_dialog_create_deck_title_hint">请输入卡组标题...</string>
+    <string name="save_word_dialog_saving_state_message">正在添加</string>
+    <string name="save_word_dialog_completed_state_message">添加成功</string>
+    <string name="save_word_dialog_button_cancel">取消</string>
+    <string name="save_word_dialog_button_add">添加</string>
+
+    <string name="migration_dialog_title">正在完成更新</string>
+    <string name="migration_dialog_loading_data">正在加载数据...</string>
+    <string name="migration_dialog_migrating_vocab_cards">正在更新单词卡片...</string>
+    <string name="migration_dialog_saving_changes">正在应用更改...</string>
+
+    <string name="vocab_card_title">单词卡片</string>
+    <string name="vocab_card_kanji">汉字读音</string>
+    <string name="vocab_card_kana">假名读音</string>
+    <string name="vocab_card_meaning">释义</string>
+    <string name="vocab_card_dictionary_meaning">使用词典释义</string>
+    <string name="vocab_card_action_save">保存</string>
+    <string name="vocab_card_action_edit">编辑</string>
+    <string name="vocab_card_action_add">添加</string>
+    <string name="vocab_card_invalid_kanji">已启用汉字读音，但内容为空</string>
+    <string name="vocab_card_invalid_kana">假名读音不能为空</string>
+    <string name="vocab_card_invalid_meaning">释义不能为空</string>
+
+    <plurals name="account_subscription_duration_years">
+        <item quantity="one">%1$d 年</item>
+        <item quantity="other">%1$d 年</item>
+    </plurals>
+
+    <plurals name="account_subscription_duration_months">
+        <item quantity="one">%1$d 个月</item>
+        <item quantity="other">%1$d 个月</item>
+    </plurals>
+
+    <plurals name="account_subscription_duration_days">
+        <item quantity="one">%1$d 天</item>
+        <item quantity="other">%1$d 天</item>
+    </plurals>
+
+    <string name="account_visit_website">在网页中查看</string>
+    <string name="account_delete">删除账户</string>
+
+    <string name="account_subscription_duration_unknown">未知的订阅时长：%1$s</string>
+
+    <string name="snackbar_sub_expired_message">订阅已过期</string>
+    <string name="snackbar_sub_expired_action">账户</string>
+
+    <string name="sponsor_recent_donations_title">最近的捐赠</string>
+    <string name="sponsor_recent_donations_error">错误：%1$s</string>
+
+    <string-array name="sponsor_recent_donations_messages">
+        <item>有位热心学习者捐赠了 %1$s 日元，非常感谢！</item>
+        <item>收到 %1$s 日元的支持，感谢帮助道场继续成长！</item>
+        <item>有人捐赠了 %1$s 日元，让更多人轻松学习汉字！</item>
+        <item>道场收到 %1$s 日元的捐赠，ありがとうございます！</item>
+        <item>感谢 %1$s 日元的捐赠，一起让知识自由传播！</item>
+        <item>一位支持者捐赠了 %1$s 日元，感谢！</item>
+        <item>收到 %1$s 日元的支持，道场会继续努力！</item>
+        <item>有人捐赠了 %1$s 日元，感谢支持免费学习！</item>
+        <item>感谢慷慨捐赠 %1$s 日元，笔画练习也要继续！</item>
+        <item>感谢捐赠 %1$s 日元，一起守护免费教育！</item>
+        <item>汉字道场向捐赠 %1$s 日元的朋友表示感谢！</item>
+        <item>善意的捐赠：%1$s 日元，谢谢你！</item>
+        <item>感谢学习者捐赠 %1$s 日元，祝你每次复习都答对！</item>
+    </string-array>
+
+    <string name="info_no_data_letter">没有找到文字 %1$s 的数据</string>
+    <string name="info_no_data_vocab">没有找到单词 %1$s 的数据</string>
+    <string name="info_no_data_copy">复制</string>
+    <string name="info_no_data_jisho">在 Jisho 中搜索</string>
+
+</resources>
