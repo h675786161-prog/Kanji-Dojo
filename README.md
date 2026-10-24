@@ -1,3 +1,8 @@
+> **非官方简体中文汉化分支 / Unofficial Simplified Chinese fork (2026-10-24)**
+> 本仓库在原作者 Yaroslav Shuliak 的 Kanji Dojo 基础上修改，改名为「日语道场」。此版本并非原作者正式发行；修改详情请看 [README.zh-CN.md](README.zh-CN.md) 和 [NOTICE.zh-CN.md](NOTICE.zh-CN.md)。代码仍以 GPL-3.0-or-later 授权。
+
+---
+
 <div align="center">
 
   <img src="preview_assets//inkscape_icon.svg" height=120 style="border-radius: 20px;">

@@ -28,10 +28,32 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew :app:assembleFdroidDebug --no-daemon --stacktrace
-      - name: Upload installable APK
+      - name: Package APK and corresponding source/license information
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p distribution
+          cp app/build/outputs/apk/fdroid/debug/*.apk distribution/
+          cp LICENSE README.zh-CN.md NOTICE.zh-CN.md distribution/
+          {
+            echo "日语道场 / Unofficial Chinese Kanji Dojo build"
+            echo "Modified on: 2026-10-24"
+            echo "Original author: Yaroslav Shuliak"
+            echo "Original repository: https://github.com/syt0r/Kanji-Dojo"
+            echo "License: GPL-3.0-or-later; see LICENSE"
+            echo "Third-party credits: see NOTICE.zh-CN.md and README.md"
+            echo "Build commit: ${GITHUB_SHA}"
+            echo "Exact corresponding source archive:"
+            echo "https://github.com/${GITHUB_REPOSITORY}/archive/${GITHUB_SHA}.zip"
+            echo "Exact corresponding source tree:"
+            echo "https://github.com/${GITHUB_REPOSITORY}/tree/${GITHUB_SHA}"
+            echo "Build command: ./gradlew :app:assembleFdroidDebug"
+          } > distribution/SOURCE_AND_LICENSE.txt
+
+      - name: Upload installable APK with license and source notice
         uses: actions/upload-artifact@v4
         with:
           name: Kanji-Dojo-zh-CN-android-apk
-          path: app/build/outputs/apk/fdroid/debug/*.apk
+          path: distribution/*
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 90

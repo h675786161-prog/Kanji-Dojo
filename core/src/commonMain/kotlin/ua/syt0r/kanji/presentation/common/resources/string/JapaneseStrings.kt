@@ -270,6 +270,11 @@ object JapaneseReminderDialogStrings : ReminderDialogStrings {
 }
 
 object JapaneseAboutStrings : AboutStrings {
+    override val derivativeNotice: String = "Kanji Dojo（原作者：Yaroslav Shuliak）の非公式中国語版。2026-10-24に改変。GPL-3.0以降。"
+    override val upstreamTitle: String = "元の Kanji Dojo"
+    override val upstreamDescription: String = "原作者・元プロジェクト"
+    override val gplTitle: String = "GNU GPLv3 ライセンス"
+    override val gplDescription: String = "利用許諾と再配布条件"
     override val title: String = "このアプリについて"
     override val version: (versionName: String) -> String = { "バージョン: $it" }
     override val githubTitle: String = "プロジェクトのGitHubページ"

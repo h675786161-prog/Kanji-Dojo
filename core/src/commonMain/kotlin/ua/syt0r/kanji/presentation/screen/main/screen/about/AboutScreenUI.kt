@@ -77,12 +77,29 @@ fun AboutScreenUI(
                     text = resolveString { about.version(BuildConfig.versionName) },
                     style = MaterialTheme.typography.labelLarge
                 )
+
+                Text(
+                    text = resolveString { about.derivativeNotice },
+                    style = MaterialTheme.typography.bodySmall
+                )
             }
 
             AboutTextRow(
                 title = resolveString { about.githubTitle },
                 subtitle = resolveString { about.githubDescription },
-                onClick = { openLink(KanjiDojoGithubLink) }
+                onClick = { openLink("https://github.com/h675786161-prog/Kanji-Dojo/tree/feat/zh-cn-android") }
+            )
+
+            AboutTextRow(
+                title = resolveString { about.upstreamTitle },
+                subtitle = resolveString { about.upstreamDescription },
+                onClick = { openLink("https://github.com/syt0r/Kanji-Dojo") }
+            )
+
+            AboutTextRow(
+                title = resolveString { about.gplTitle },
+                subtitle = resolveString { about.gplDescription },
+                onClick = { openLink("https://github.com/h675786161-prog/Kanji-Dojo/blob/feat/zh-cn-android/LICENSE") }
             )
 
             var shouldShowVersionChangeDialog by remember { mutableStateOf(false) }

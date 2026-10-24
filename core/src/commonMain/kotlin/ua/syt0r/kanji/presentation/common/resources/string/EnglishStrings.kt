@@ -278,6 +278,11 @@ object EnglishReminderDialogStrings : ReminderDialogStrings {
 }
 
 object EnglishAboutStrings : AboutStrings {
+    override val derivativeNotice: String = "Unofficial Chinese localization of Kanji Dojo (Yaroslav Shuliak), modified 2026-10-24; GPL-3.0-or-later."
+    override val upstreamTitle: String = "Original Kanji Dojo"
+    override val upstreamDescription: String = "Original author and source project"
+    override val gplTitle: String = "GNU GPLv3 License"
+    override val gplDescription: String = "License terms and copying permissions"
     override val title: String = "About"
     override val version: (versionName: String) -> String = { "Version: $it" }
     override val versionChangesTitle: String = "Version Changes"

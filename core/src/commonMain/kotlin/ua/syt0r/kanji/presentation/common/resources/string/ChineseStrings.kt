@@ -271,6 +271,11 @@ object ChineseReminderDialogStrings : ReminderDialogStrings {
 }
 
 object ChineseAboutStrings : AboutStrings {
+    override val derivativeNotice: String = "基于 Yaroslav Shuliak 的 Kanji Dojo 修改；2026-10-24 汉化。非官方版本，依 GPL-3.0 或更新版本授权。"
+    override val upstreamTitle: String = "原版 Kanji Dojo"
+    override val upstreamDescription: String = "原作者及原项目仓库"
+    override val gplTitle: String = "GNU GPLv3 开源许可证"
+    override val gplDescription: String = "查看使用、修改及再分发条款"
     override val title: String = "关于应用"
     override val version: (versionName: String) -> String = { "版本：$it" }
     override val githubTitle: String = "项目 GitHub 页面"

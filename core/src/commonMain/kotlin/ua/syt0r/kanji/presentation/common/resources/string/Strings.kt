@@ -348,6 +348,11 @@ interface ReminderDialogStrings {
 
 interface AboutStrings {
     val title: String
+    val derivativeNotice: String
+    val upstreamTitle: String
+    val upstreamDescription: String
+    val gplTitle: String
+    val gplDescription: String
     val version: (versionName: String) -> String
     val githubTitle: String
     val githubDescription: String
