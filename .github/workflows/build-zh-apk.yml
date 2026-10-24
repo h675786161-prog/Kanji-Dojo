@@ -1,0 +1,35 @@
+name: Build Chinese Android APK
+
+on:
+  push:
+    branches:
+      - feat/zh-cn-android
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - name: Build Chinese debug APK
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleFdroidDebug --no-daemon --stacktrace
+      - name: Upload installable APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kanji-Dojo-zh-CN-android-apk
+          path: app/build/outputs/apk/fdroid/debug/*.apk
+          if-no-files-found: error
+          retention-days: 30
