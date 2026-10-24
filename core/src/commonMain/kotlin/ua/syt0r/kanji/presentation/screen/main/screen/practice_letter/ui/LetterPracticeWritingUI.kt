@@ -27,6 +27,7 @@ import androidx.compose.material.rememberBottomSheetScaffoldState
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.derivedStateOf
@@ -77,10 +78,21 @@ fun LetterPracticeWritingUI(
     onWordClick: (JapaneseWord) -> Unit
 ) {
 
-    val reviewState = rememberUpdatedState(reviewState)
+    val tracingEnabled = remember(reviewState) { mutableStateOf(false) }
+    val tracingUsedInReview = remember(reviewState) { mutableStateOf(false) }
+    val currentReviewState = rememberUpdatedState(reviewState)
 
-    val infoSectionState = reviewState.asInfoSectionState(layoutConfiguration)
-    val wordsBottomSheetState = reviewState.asWordsBottomSheetState()
+    val onTracingToggle: () -> Unit = {
+        val enabled = !tracingEnabled.value
+        tracingEnabled.value = enabled
+        if (enabled && !currentReviewState.value.isStudyMode.value) {
+            // Guided copying must not count as an unassisted SRS success.
+            tracingUsedInReview.value = true
+        }
+    }
+
+    val infoSectionState = currentReviewState.asInfoSectionState(layoutConfiguration)
+    val wordsBottomSheetState = currentReviewState.asWordsBottomSheetState()
 
     val scaffoldState = rememberBottomSheetScaffoldState()
     val coroutineScope = rememberCoroutineScope()
@@ -116,8 +128,14 @@ fun LetterPracticeWritingUI(
 
     val answersSection: @Composable BoxScope.() -> Unit = {
         AnswerButtons(
-            letterWritingButtonsState = reviewState.toAnswerButtonsState(),
-            studyCompleted = { reviewState.value.isStudyMode.value = false },
+            letterWritingButtonsState = currentReviewState.toAnswerButtonsState(),
+            tracingUsed = tracingUsedInReview.value,
+            studyCompleted = {
+                currentReviewState.value.isStudyMode.value = false
+                // Preview/study-mode tracing does not contaminate the scored review.
+                tracingEnabled.value = false
+                tracingUsedInReview.value = false
+            },
             answerSelected = onNextClick,
             modifier = Modifier.align(Alignment.BottomCenter)
         )
@@ -152,7 +170,9 @@ fun LetterPracticeWritingUI(
             )
 
             LetterPracticeWritingInputSection(
-                state = reviewState,
+                state = currentReviewState,
+                tracingEnabled = tracingEnabled.value,
+                onTracingToggle = onTracingToggle,
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .trackItemPosition {
@@ -198,7 +218,9 @@ fun LetterPracticeWritingUI(
 
         val inputSection: @Composable RowScope.() -> Unit = {
             LetterPracticeWritingInputSection(
-                state = reviewState,
+                state = currentReviewState,
+                tracingEnabled = tracingEnabled.value,
+                onTracingToggle = onTracingToggle,
                 modifier = Modifier
                     .fillMaxHeight()
                     .weight(1f)
@@ -270,6 +292,7 @@ private fun State<LetterPracticeReviewState.Writing>.toAnswerButtonsState(): Sta
 @Composable
 private fun AnswerButtons(
     letterWritingButtonsState: State<LetterWritingButtonsState>,
+    tracingUsed: Boolean,
     studyCompleted: () -> Unit,
     answerSelected: (PracticeAnswer) -> Unit,
     modifier: Modifier
@@ -328,13 +351,33 @@ private fun AnswerButtons(
                 }
 
                 is LetterWritingButtonsState.DefaultButtons -> {
-                    PracticeAnswerButtonsRow(
-                        answers = writingButtonsState.answers,
-                        onClick = {
-                            val updatedAnswer = it.copy(mistakes = writingButtonsState.mistakes)
-                            answerSelected(updatedAnswer)
+                    if (tracingUsed) {
+                        // Copying is practice, not proof of recall: schedule the same card again.
+                        PracticeAnswerButtonsContainer {
+                            TextButton(
+                                onClick = {
+                                    answerSelected(
+                                        writingButtonsState.answers.again.copy(
+                                            mistakes = writingButtonsState.mistakes
+                                        )
+                                    )
+                                },
+                                modifier = Modifier
+                                    .padding(horizontal = 20.dp)
+                                    .width(400.dp)
+                            ) {
+                                Text(resolveString { letterPractice.tracingRetryButton })
+                            }
                         }
-                    )
+                    } else {
+                        PracticeAnswerButtonsRow(
+                            answers = writingButtonsState.answers,
+                            onClick = {
+                                val updatedAnswer = it.copy(mistakes = writingButtonsState.mistakes)
+                                answerSelected(updatedAnswer)
+                            }
+                        )
+                    }
                 }
             }
         }

@@ -604,6 +604,9 @@ object EnglishLetterPracticeStrings : LetterPracticeStrings {
         "Examples ($it)"
     }
     override val studyFinishedButton: String = "Review"
+    override val tracingEnableButton: String = "Trace"
+    override val tracingDisableButton: String = "Hide guide"
+    override val tracingRetryButton: String = "Guided copy finished · Practice again"
     override val noKanjiTranslationsLabel: String = "[No translations]"
 
     override val altStrokeEvaluatorTitle: String = "Strict Stroke Evaluator"

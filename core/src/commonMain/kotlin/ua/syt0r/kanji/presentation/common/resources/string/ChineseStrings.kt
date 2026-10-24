@@ -605,7 +605,10 @@ object ChineseLetterPracticeStrings : LetterPracticeStrings {
     override val leftHandedModeMessage: String = "横屏书写时将书写区域移至左侧"
 
     override val headerWordsMessage: (count: Int) -> String = { "单词 ($it)" }
-    override val studyFinishedButton: String = "待复习"
+    override val studyFinishedButton: String = "开始默写"
+    override val tracingEnableButton: String = "开启临摹"
+    override val tracingDisableButton: String = "关闭临摹"
+    override val tracingRetryButton: String = "临摹完成 · 再练一次"
     override val altStrokeEvaluatorTitle: String = "备用笔画识别"
     override val altStrokeEvaluatorMessage: String =
         "使用备用算法代替原本的笔画识别"

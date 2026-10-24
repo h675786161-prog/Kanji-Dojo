@@ -581,6 +581,9 @@ interface LetterPracticeStrings {
 
     val headerWordsMessage: (count: Int) -> String
     val studyFinishedButton: String
+    val tracingEnableButton: String
+    val tracingDisableButton: String
+    val tracingRetryButton: String
     val noKanjiTranslationsLabel: String
 
     val altStrokeEvaluatorTitle: String

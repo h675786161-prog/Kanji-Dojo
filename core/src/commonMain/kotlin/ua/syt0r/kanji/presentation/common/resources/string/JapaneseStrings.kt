@@ -592,6 +592,9 @@ object JapaneseLetterPracticeStrings : LetterPracticeStrings {
 
     override val headerWordsMessage: (count: Int) -> String = { "単語 ($it)" }
     override val studyFinishedButton: String = "復習"
+    override val tracingEnableButton: String = "なぞり書き"
+    override val tracingDisableButton: String = "お手本を隠す"
+    override val tracingRetryButton: String = "なぞり書き完了 · もう一度"
     override val altStrokeEvaluatorTitle: String = "代替字画認識"
     override val altStrokeEvaluatorMessage: String =
         "オリジナルの字画認識の代わりに代替のアルゴリズムを使う"
