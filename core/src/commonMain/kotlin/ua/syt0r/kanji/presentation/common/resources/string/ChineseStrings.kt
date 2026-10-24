@@ -393,7 +393,7 @@ object ChineseDeckPickerStrings : DeckPickerStrings {
     override val vocabDeckTitleCommonVerbs: String = "常用动词"
     override val vocabDeckTitleColors: String = "颜色"
     override val vocabDeckTitleRegularFood: String = "日常食物"
-    override val vocabDeckTitleChineseFood: String = "日本料理"
+    override val vocabDeckTitleJapaneseFood: String = "日本料理"
     override val vocabDeckTitleGrammarTerms: String = "语法术语"
     override val vocabDeckTitleAnimals: String = "动物"
     override val vocabDeckTitleBody: String = "身体"
@@ -527,7 +527,7 @@ object ChineseCommonPracticeStrings : CommonPracticeStrings {
     override val configurationCompleteButton: String = "开始"
 
     override val additionalKanaReadingsNote: (List<String>) -> String = {
-        "注意：也可写作 ${it.joinToString { "「$it」" }}と書くこともあります"
+        "注意：也可写作 ${it.joinToString { "「$it」" }}"
     }
 
     override val formattedSrsInterval: (Duration) -> String = {
