@@ -202,6 +202,7 @@ interface TutorialDialogStrings {
 interface SponsorStrings {
     val pageTitle: String
     val buttonText: String
+    val unavailableMessage: String
     val message: String
 }
 

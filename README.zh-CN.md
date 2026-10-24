@@ -33,6 +33,10 @@
 
 源码遵守原项目 GPL-3.0-or-later 许可。使用、改动与再分发请保留相应版权声明和许可证。
 
-## 赞助链接归属
+## 奶茶赞助入口
 
-中文版目前不收取赞助。APP 内的“支持原作者（syt0r）”按钮和本仓库的 `.github/FUNDING.yml` 均指向 **Kanji Dojo 原作者的 Buy Me a Coffee 页面**：https://buymeacoffee.com/syt0r 。这是保留上游项目的赞助入口，**不是中文版维护者的收款渠道**。
+- APP 的赞助按钮更名为 **「🥤 请中文版作者喝杯奶茶」**，只用于中文版维护者的未来赞助。
+- 目前 **尚未提供中文版维护者的收款链接**，按钮默认禁用，不会把捐款错误地发给上游开发者。
+- 配置收款入口的位置：`app/src/fdroid/java/ua/syt0r/kanji/presentation/screen/main/FdroidSponsorScreenContent.kt` 的 `MaintainerMilkTeaUrl`。
+- 原作者 Yaroslav Shuliak 及原项目链接继续保留在 APP 的「关于」页面及仓库版权说明中。
+- 本汉化分支去除了指向原作者收款账户的 `.github/FUNDING.yml`，防止用户误以为那是中文版维护者的赞助地址；原仓库不受影响。

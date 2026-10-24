@@ -313,12 +313,13 @@ object JapaneseFeedbackStrings : FeedbackStrings by EnglishFeedbackStrings {
 }
 
 object JapaneseSponsorStrings : SponsorStrings by EnglishSponsorStrings {
-    override val pageTitle: String = "Kanji Dojo 原作者を支援"
-    override val buttonText: String = "原作者を支援"
+    override val pageTitle: String = "中国語版のメンテナーを支援"
+    override val buttonText: String = "🥤 中国語版の作者にミルクティーを贈る"
+    override val unavailableMessage: String = "中国語版の寄付先はまだ設定されていません。現在は寄付できません。"
     override val message: String = """
-        Kanji Dojo は Yaroslav Shuliak が開発したオープンソースアプリです。
-        この非公式中国語版のコーヒーリンクは、原作者 syt0r の Buy Me a Coffee に移動します。
-        中国語版のメンテナーへの寄付ではありません。
+        「日语道场」は Kanji Dojo の非公式中国語版です。
+        原作者は Yaroslav Shuliak です。元のプロジェクトとライセンスは「アプリについて」から確認できます。
+        このページのミルクティー寄付は中国語版のメンテナーを対象としていますが、現在は利用できません。
     """.trimIndent()
 }
 

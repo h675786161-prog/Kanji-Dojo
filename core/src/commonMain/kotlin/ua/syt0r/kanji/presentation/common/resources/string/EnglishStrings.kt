@@ -332,12 +332,13 @@ object EnglishFeedbackStrings : FeedbackStrings {
 }
 
 object EnglishSponsorStrings : SponsorStrings {
-    override val pageTitle: String = "Support the original Kanji Dojo developer"
-    override val buttonText: String = "Support original developer"
+    override val pageTitle: String = "Support the Chinese edition"
+    override val buttonText: String = "🥤 Buy the Chinese edition maintainer a milk tea"
+    override val unavailableMessage: String = "The Chinese edition's donation link is not configured yet. Donations are temporarily unavailable."
     override val message: String = """
-        Kanji Dojo is originally developed by Yaroslav Shuliak. This is an unofficial Chinese localization.
-        The coffee link leads to the original developer's Buy Me a Coffee page (syt0r), not to the localization maintainer.
-        Donations support the upstream project. No payment is collected by this fork.
+        This unofficial Chinese localization of Kanji Dojo is maintained independently of the original project.
+        The original app was developed by Yaroslav Shuliak under GPL-3.0-or-later. You can find the original repository under About.
+        The milk tea donation option is intended for the Chinese edition maintainer only; it is not currently enabled.
     """.trimIndent()
 }
 

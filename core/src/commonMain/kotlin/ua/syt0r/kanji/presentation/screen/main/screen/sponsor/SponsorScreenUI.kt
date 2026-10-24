@@ -56,6 +56,7 @@ import ua.syt0r.kanji.sponsor_recent_donations_title
 @Composable
 fun SponsorScreenUI(
     onUpClick: () -> Unit,
+    showRecentDonations: Boolean = true,
     content: @Composable ColumnScope.() -> Unit
 ) {
 
@@ -82,7 +83,7 @@ fun SponsorScreenUI(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
 
-            SponsorScreenDefaultContent()
+            SponsorScreenDefaultContent(showRecentDonations)
 
             content()
 
@@ -93,7 +94,7 @@ fun SponsorScreenUI(
 }
 
 @Composable
-fun ColumnScope.SponsorScreenDefaultContent() {
+fun ColumnScope.SponsorScreenDefaultContent(showRecentDonations: Boolean = true) {
 
     Text(
         text = resolveString { sponsor.pageTitle },
@@ -112,7 +113,7 @@ fun ColumnScope.SponsorScreenDefaultContent() {
         )
     }
 
-    RecentDonations()
+    if (showRecentDonations) RecentDonations()
 
 }
 
