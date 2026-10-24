@@ -332,14 +332,13 @@ object EnglishFeedbackStrings : FeedbackStrings {
 }
 
 object EnglishSponsorStrings : SponsorStrings {
+    override val pageTitle: String = "Support the original Kanji Dojo developer"
+    override val buttonText: String = "Support original developer"
     override val message: String = """
-        Development of Kanji Dojo started in 2021 by a single person and it remains free for all users who want to learn Japanese
-        
-        If you find the app useful please consider supporting this project financially, every contribution counts
-        
-        Financial support will allow me to focus more on development, bring extra features, add more voiced content and translations
+        Kanji Dojo is originally developed by Yaroslav Shuliak. This is an unofficial Chinese localization.
+        The coffee link leads to the original developer's Buy Me a Coffee page (syt0r), not to the localization maintainer.
+        Donations support the upstream project. No payment is collected by this fork.
     """.trimIndent()
-
 }
 
 object EnglishDeckPickerStrings : DeckPickerStrings {

@@ -140,7 +140,7 @@
     <string name="snackbar_sub_expired_message">订阅已过期</string>
     <string name="snackbar_sub_expired_action">账户</string>
 
-    <string name="sponsor_recent_donations_title">最近的捐赠</string>
+    <string name="sponsor_recent_donations_title">原项目收到的赞助</string>
     <string name="sponsor_recent_donations_error">错误：%1$s</string>
 
     <string-array name="sponsor_recent_donations_messages">

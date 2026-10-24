@@ -200,6 +200,8 @@ interface TutorialDialogStrings {
 }
 
 interface SponsorStrings {
+    val pageTitle: String
+    val buttonText: String
     val message: String
 }
 

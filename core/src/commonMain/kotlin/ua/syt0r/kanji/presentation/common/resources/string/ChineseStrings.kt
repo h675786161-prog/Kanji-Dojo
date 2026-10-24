@@ -325,11 +325,14 @@ object ChineseFeedbackStrings : FeedbackStrings by EnglishFeedbackStrings {
 }
 
 object ChineseSponsorStrings : SponsorStrings {
+    override val pageTitle: String = "支持 Kanji Dojo 原作者"
+    override val buttonText: String = "☕ 支持原作者（syt0r）"
     override val message: String = """
         本应用基于 Yaroslav Shuliak 于 2021 年开始开发的开源项目 Kanji Dojo。
         原项目面向日语学习者免费开放，中文版保留原作者署名与开源许可。
 
-        如果你喜欢原项目，可以通过原作者提供的方式支持其开发与维护。
+        如果你喜欢原项目，可以通过下方的咖啡链接支持其开发与维护。
+        此链接指向原作者 syt0r 的赞助页面，款项不会进入中文版维护者账户。
         本中文版的名称为「日语道场」，并非原作者发布的官方中文版。
     """.trimIndent()
 }

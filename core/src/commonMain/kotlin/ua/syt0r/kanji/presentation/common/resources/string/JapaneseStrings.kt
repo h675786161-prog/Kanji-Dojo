@@ -312,7 +312,15 @@ object JapaneseFeedbackStrings : FeedbackStrings by EnglishFeedbackStrings {
     override val errorMessage: (String?) -> String = { "エラー: $it" }
 }
 
-object JapaneseSponsorStrings : SponsorStrings by EnglishSponsorStrings
+object JapaneseSponsorStrings : SponsorStrings by EnglishSponsorStrings {
+    override val pageTitle: String = "Kanji Dojo 原作者を支援"
+    override val buttonText: String = "原作者を支援"
+    override val message: String = """
+        Kanji Dojo は Yaroslav Shuliak が開発したオープンソースアプリです。
+        この非公式中国語版のコーヒーリンクは、原作者 syt0r の Buy Me a Coffee に移動します。
+        中国語版のメンテナーへの寄付ではありません。
+    """.trimIndent()
+}
 
 object JapaneseDeckPickerStrings : DeckPickerStrings {
 

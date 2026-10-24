@@ -96,7 +96,7 @@ fun SponsorScreenUI(
 fun ColumnScope.SponsorScreenDefaultContent() {
 
     Text(
-        text = resolveString { appName },
+        text = resolveString { sponsor.pageTitle },
         style = MaterialTheme.typography.headlineLarge
     )
 
