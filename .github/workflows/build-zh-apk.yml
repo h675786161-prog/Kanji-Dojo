@@ -22,6 +22,8 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
+      - name: Validate Chinese localization
+        run: python3 .github/scripts/check_zh_cn_i18n.py
       - name: Build Chinese debug APK
         run: |
           chmod +x gradlew

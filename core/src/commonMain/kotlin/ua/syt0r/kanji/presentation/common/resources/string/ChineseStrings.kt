@@ -15,10 +15,11 @@ import ua.syt0r.kanji.presentation.common.CommonDateTimeFormat
 import ua.syt0r.kanji.presentation.common.theme.extraColorScheme
 import ua.syt0r.kanji.presentation.common.withClickableUrl
 import kotlin.time.Duration
+import ua.syt0r.kanji.presentation.screen.main.screen.feedback.FeedbackScreen
 
 object ChineseStrings : Strings {
 
-    override val appName: String = "汉字道场"
+    override val appName: String = "日语道场"
 
     override val hiragana: String = "平假名"
     override val katakana: String = "片假名"
@@ -299,6 +300,17 @@ object ChineseBackupStrings : BackupStrings {
 }
 
 object ChineseFeedbackStrings : FeedbackStrings by EnglishFeedbackStrings {
+    override val topicGeneral: String = "常规问题"
+    override val topicExpression: (id: Long, screen: FeedbackScreen) -> String = { id, screen ->
+        val screenName = when (screen) {
+            FeedbackScreen.WritingPractice -> "书写练习"
+            FeedbackScreen.ReadingPractice -> "认读练习"
+            FeedbackScreen.Search -> "搜索"
+            FeedbackScreen.CharacterInfo -> "文字详情"
+            FeedbackScreen.VocabPractice -> "单词练习"
+        }
+        "$screenName · 条目 $id"
+    }
     override val title: String = "意见反馈"
     override val topicTitle: String = "主题"
     override val messageLabel: String = "请输入反馈内容"
@@ -307,7 +319,15 @@ object ChineseFeedbackStrings : FeedbackStrings by EnglishFeedbackStrings {
     override val errorMessage: (String?) -> String = { "错误：$it" }
 }
 
-object ChineseSponsorStrings : SponsorStrings by EnglishSponsorStrings
+object ChineseSponsorStrings : SponsorStrings {
+    override val message: String = """
+        本应用基于 Yaroslav Shuliak 于 2021 年开始开发的开源项目 Kanji Dojo。
+        原项目面向日语学习者免费开放，中文版保留原作者署名与开源许可。
+
+        如果你喜欢原项目，可以通过原作者提供的方式支持其开发与维护。
+        本中文版的名称为「日语道场」，并非原作者发布的官方中文版。
+    """.trimIndent()
+}
 
 object ChineseDeckPickerStrings : DeckPickerStrings {
 
